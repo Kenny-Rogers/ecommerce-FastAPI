@@ -22,3 +22,4 @@ argon2-cffi==21.1.0
 pycparser==2.20
 passlib==1.7.4
 cffi==1.14.6
+email-validator==1.1.3

@@ -1,7 +1,10 @@
+from typing import Optional
+
 from sqlalchemy.orm import Session
 
-from .models import User
+from . models import User
 
 
-def verify_email_exit(email: str, db_session: Session) -> Optional[User]:
-    return None
+async def verify_email_exit(email: str, db_session: Session) -> Optional[User]:
+    return db_session.query(User).filter(User.email == email).first()
+
